@@ -1,7 +1,6 @@
 from bottle import route, run, template, request
 import requests
 import json
-import app_details
 from configparser import ConfigParser
 
 config_file_name = 'app_secrets.ini'
@@ -29,13 +28,15 @@ def get_access_refresh_tokens(auth_code):
     params = {
         'grant_type': 'authorization_code',
         'redirect_uri': config['other']['redirect_uri'],
-        'code': auth_code
+        'code': auth_code,
+        'client_id': config['app_secrets']['app_id'],
+        'client_secret': config['app_secrets']['app_secret']
     }
     headers = {
-        # 'Authorization': f'Basic {app_details.app_id}:{app_details.secret}',
         'Content-Type': 'application/x-www-form-urlencoded'
     }
-    codes = requests.post(token_uri, data=f"grant_type=authorization_code&redirect_uri={config['other']['redirect_uri']}&code={auth_code}&client_id={config['app_secrets']['app_id']}&client_secret={config['app_secrets']['app_secret']}", headers=headers)
+
+    codes = requests.post(token_uri, data=params, headers=headers)
     print(codes.request.headers)
     print(codes.text)
 

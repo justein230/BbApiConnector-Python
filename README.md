@@ -21,9 +21,10 @@ I found it helpful for me to split the functionality into two files: one for whe
 
 ## Set Up a Session for Use in Python Programs
 1. When all placeholders in the `app_secrets.ini` file are filled (which they should be at this point), you are ready to start authenticating with the SKY API!
-2. In your program, add `import BbApiConnector` to the top of your program.
-3. In order to use the API, use the pre-authorized Session object created with this script. add the line `bb_session = BbApiConnector.get_session()` near the top of your file.
-4. You are done! In order to use the API, use bb_session like you would the normal requests library. No headers need to be specified. An example request is located below:
+2. In your program, add `from BbApiConnector import BbApiConnector` to the top of your program.
+3. Create a BbApiConnector object and pass in the config file path, like so: `api_conn = BbApiConnector('app_secrets.ini')`
+4. In order to use the API, use the pre-authorized Session object created with this script. add the line `bb_session = api_conn.get_session()` near the top of your file.
+5. You are done! In order to use the API, use bb_session like you would the normal requests library. No headers need to be specified. An example request is located below:
 ```python
 params = {
     'base_role_ids': '1'

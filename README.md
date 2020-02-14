@@ -19,6 +19,11 @@ I found it helpful for me to split the functionality into two files: one for whe
 3. Sign in with your Blackbaud ID, then click "Authorize". You should be taken to a screen with your authorization code. If you look at the console of the application, you will see a very long access token and a much shorter refresh token. Copy these values and paste them in `app_secrets.ini`.
 4. Once you have copied these values into the config file, you can terminate the bb_auth application.
 
+
+## Install the BbApiConnector library using the .whl file
+1. Find the .whl file under Releases in GitHub and download the file.
+2. Either using the virtual enviornment created earlier for bb_auth, or a new virtual environment, install the .whl file by running the following command: `pip install <filename>.whl`.
+
 ## Set Up a Session for Use in Python Programs
 1. When all placeholders in the `app_secrets.ini` file are filled (which they should be at this point), you are ready to start authenticating with the SKY API!
 2. In your program, add `from BbApiConnector import BbApiConnector` to the top of your program.

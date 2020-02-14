@@ -37,4 +37,4 @@ params = {
 req = bb_session.get("https://api.sky.blackbaud.com/school/v1/users/extended", params=params)
 ```
 
-Happy API'ing! Please feel free to report any issues with the code in the Issues section, or contribute yourself with a Pull Requests. Note that this is a personal project of mine, and I will only review Issues and Pull Requests when time allows.
+Happy API'ing! Please feel free to report any issues with the code in the Issues section, or contribute yourself with a Pull Request. Note that this is a personal project of mine, and I will only review Issues and Pull Requests when time allows.

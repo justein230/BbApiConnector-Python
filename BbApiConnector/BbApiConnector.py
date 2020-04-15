@@ -1,7 +1,11 @@
 import requests
 from configparser import ConfigParser
 
-class BbApiConnector:
+class BbApiConnector(object):
+    """
+    This class is used to establish and maintain a connection to the Blackbaud SKY API using a previously generated
+    .ini file.
+    """
     def __init__(self, config_file_name):
         self.config_file_name = config_file_name
         self._config = ConfigParser()

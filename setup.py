@@ -11,7 +11,7 @@ setuptools.setup(
     description="A library to quickly and easily set up a connection to the Blackbaud SKY API",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/justein230/blackbaud_sky_api_generator_python",
+    url="https://github.com/justein230/BbApiConnector-Python",
     packages=setuptools.find_packages(exclude=['resources']),
     classifiers=[
         "Programming Language :: Python :: 3",

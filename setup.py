@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="BbApiConnector-justein",
-    version="0.1.1",
+    version="0.1.2",
     author="Justin Stein",
     author_email="justein230@gmail.com",
     description="A library to quickly and easily set up a connection to the Blackbaud SKY API",

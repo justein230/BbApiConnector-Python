@@ -13,6 +13,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/justein230/BbApiConnector-Python",
     packages=setuptools.find_packages(exclude=['resources']),
+    install_requires=[
+        'requests'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
